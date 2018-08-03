@@ -1,2 +1,2 @@
 # Awoo!!! >.<
-A silly discord bot writting using Discord.js!
+A silly discord bot written using Discord.js!
