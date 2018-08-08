@@ -37,7 +37,7 @@ client.on('message', msg => {
 				msg.channel.send(help_string);
 				break;
 				case "moon":
-				var reply = "An error occured";
+				var reply = "New Moon, no awoo...";
 				var jd = moon(Date.now());
 				var b = Math.round((jd - Math.floor(jd))*8);
 				switch(b) {
