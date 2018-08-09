@@ -14,12 +14,12 @@ Admin only commands: \n\
 `!awoo sleep [duration=300]` to nap for a certain amount of seconds. \n\
 `!awoo wake` to wake up from a nap';
 
-const about_string = "Application name: Awoo-beta \n\
+const about_string = 'Application name: Awoo-beta \n\
 Version: August 2018 in development \n\
 Made by: Wulfboy_95 \n\
 Github: https://github.com/alphawulfboy-95/awoo \n\
 Discord: <@339379689892085772> \n\
-Copyright: All Rights Reserved 2018";
+Copyright: All Rights Reserved 2018';
 
 const response_string = "AWOO!!! >.<";
 
@@ -66,7 +66,7 @@ client.on('message', msg => {
 				msg.channel.send(reply);
 				break;
 				case "about":
-				msg.channel.send(response_string);
+				msg.channel.send(about_string);
 				break;
 				case "sleep":
 				msg.channel.send("Not available yet. " + response_string);
