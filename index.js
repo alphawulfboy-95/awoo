@@ -37,32 +37,18 @@ client.on('message', msg => {
 				msg.channel.send(help_string);
 				break;
 				case "moon":
-				var reply = "New Moon, no awoo...";
+				case "🎑":
+				var reply;
 				var jd = moon(Date.now());
-				var b = Math.round((jd - Math.floor(jd))*8);
-				switch(b) {
-					case 1:
-					reply = "Waxing Cresent, a little awoo...";
-					break;
-					case 2:
-					reply = "First Quarter, a little more awoo.";
-					break;
-					case 3:
-					reply = "Waxing Gibbous, awoo!";
-					break;
-					case 4:
-					reply = "FULL MOON! AWOO!!!  >.<";
-					break;
-					case 5:
-					reply = "Waning Gibbous, awoo!";
-					break;
-					case 6:
-					reply = "Last quarter, less awoo.";
-					break;
-					case 7:
-					reply = "Waning cresent, a little awoo...";
-					break;
-				}
+				var b = (jd - Math.floor(jd))*20;
+				if ((b >=20) | (b < 1)) reply = "🌑 New Moon, no awoo..."
+				else if (b < 5) reply = "🌒 Waxing Crescent, a little awoo...";
+				else if (b == 5) reply = "🌓 First Quarter, a little more awoo.";
+				else if (b < 10) reply = "🌔 Waxing Gibbous, awoo!";
+				else if (b == 10) reply = "🌕 FULL MOON! AWOO!!! 😆";
+				else if (b < 15) reply = "🌖 Waning Gibbous, awoo!";
+				else if (b == 15) reply = "🌗 Last quarter, less awoo.";
+				else if (b < 20) reply = "🌘 Waning crescent, a little awoo...";
 				msg.channel.send(reply);
 				break;
 				case "about":
