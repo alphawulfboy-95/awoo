@@ -37,10 +37,9 @@ client.on('message', msg => {
 				msg.channel.send(help_string);
 				break;
 				case "moon":
-				case "🎑":
 				var reply;
 				var jd = moon(Date.now());
-				var b = (jd - Math.floor(jd))*20;
+				var b = Math.round((jd - Math.floor(jd))*20);
 				if ((b >=20) | (b < 1)) reply = "🌑 New Moon, no awoo..."
 				else if (b < 5) reply = "🌒 Waxing Crescent, a little awoo...";
 				else if (b == 5) reply = "🌓 First Quarter, a little more awoo.";
